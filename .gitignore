@@ -1,0 +1,5 @@
+__pycache__/
+data/characters/*
+!data/characters/.gitkeep
+!data/characters/example_character.json
+.venv/
