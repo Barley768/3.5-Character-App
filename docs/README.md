@@ -27,12 +27,14 @@ In accordance with the Open Game License:
     - Trademarks
     - Logos
     - Proper names unique to copyrighted settings
+
 are **explicitly excluded** from this project.
 
 Any references to such content must be supplied independently by the user and are not distributed as part of this repository.
 
 ## User-Provided Content
 This application may allow users to input, import, or define their own game data, including homebrew matieral or content from legally owned sources.
+
 ⚠️ **Users are responsible for ensuring that any content they add complies with applicable copyright and licensing laws.**
 
 This repository does **not** distribute, endorse, or validate any user-provided copyrighted material.
