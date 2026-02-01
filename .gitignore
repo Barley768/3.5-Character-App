@@ -1,5 +1,57 @@
+# ===============================
+# Python
+# ===============================
+
+# Byte-compiled / optimised files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+#Test / coverage output
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# ===============================
+# IDEs / Editors
+# ===============================
+
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+
+# ===============================
+# OS-specific
+# ===============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# ===============================
+# Logs / Runtime files
+# ===============================
+
+*.log
+
+# ===============================
+# Project-specific
+# ===============================
+
 data/characters/*
 !data/characters/.gitkeep
 !data/characters/example_character.json
-.venv/
