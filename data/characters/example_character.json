@@ -1,0 +1,221 @@
+{
+  "character_name": "Thordak Ironbeard",
+  "player_name": "Example Player",
+  "class_level": "Fighter 5",
+  "career_level": "5",
+  "race": "Dwarf",
+  "alignment": "Lawful Good",
+  "deity": "Moradin",
+  "size": "Medium",
+  "age": "87",
+  "gender": "Male",
+  "height": "4'3\"",
+  "weight": "185 lbs",
+  "eyes": "Brown",
+  "hair": "Red",
+  "skin": "Tan",
+  "abilities": {
+    "Strength": 16,
+    "Dexterity": 12,
+    "Constitution": 16,
+    "Intelligence": 10,
+    "Wisdom": 13,
+    "Charisma": 8
+  },
+  "temp_abilities": {
+    "Strength": 0,
+    "Dexterity": 0,
+    "Constitution": 0,
+    "Intelligence": 0,
+    "Wisdom": 0,
+    "Charisma": 0
+  },
+  "hp_total": 52,
+  "hp_current": 52,
+  "nonlethal_damage": 0,
+  "speed": 20,
+  "ac_armor_bonus": 6,
+  "ac_shield_bonus": 2,
+  "ac_natural_armor": 0,
+  "ac_deflection": 0,
+  "ac_misc": 0,
+  "damage_reduction": "0",
+  "initiative_misc": 0,
+  "saves": {
+    "Fortitude": {
+      "base": 4,
+      "magic": 0,
+      "misc": 2,
+      "temp": 0
+    },
+    "Reflex": {
+      "base": 1,
+      "magic": 0,
+      "misc": 2,
+      "temp": 0
+    },
+    "Will": {
+      "base": 1,
+      "magic": 0,
+      "misc": 2,
+      "temp": 0
+    }
+  },
+  "base_attack_bonus": 5,
+  "spell_resistance": 0,
+  "grapple_misc": 0,
+  "attacks": [
+    {
+      "name": "+1 Battleaxe",
+      "bonus": "+9",
+      "damage": "1d8+4",
+      "critical": "x3",
+      "range": "Melee",
+      "type": "Slashing",
+      "notes": "Primary weapon"
+    },
+    {
+      "name": "Throwing Axe",
+      "bonus": "+6",
+      "damage": "1d6+3",
+      "critical": "x2",
+      "range": "10 ft",
+      "type": "Slashing",
+      "notes": "Ranged option"
+    }
+  ],
+  "ammunition": [
+    {
+      "name": "Throwing Axes",
+      "amount": 3,
+      "notes": "Strapped to belt"
+    }
+  ],
+  "armor": [
+    {
+      "type": "Breastplate +1",
+      "ac_bonus": 6,
+      "max_dex": 3,
+      "check_penalty": -3,
+      "spell_failure": 25,
+      "speed": 20,
+      "weight": 30,
+      "special": "+1 enchantment"
+    }
+  ],
+  "shields": [
+    {
+      "type": "Heavy Steel Shield",
+      "ac_bonus": 2,
+      "weight": 15,
+      "check_penalty": -2,
+      "spell_failure": 15,
+      "special": "Standard shield"
+    }
+  ],
+  "protective_items": [],
+  "other_possessions": [
+    {
+      "name": "Backpack",
+      "price": 2,
+      "weight": 2
+    },
+    {
+      "name": "Bedroll",
+      "price": 0.1,
+      "weight": 5
+    },
+    {
+      "name": "Rope, silk (50 ft)",
+      "price": 10,
+      "weight": 5
+    },
+    {
+      "name": "Rations (5 days)",
+      "price": 2.5,
+      "weight": 5
+    },
+    {
+      "name": "Waterskin",
+      "price": 1,
+      "weight": 4
+    },
+    {
+      "name": "Flint and steel",
+      "price": 1,
+      "weight": 0
+    }
+  ],
+  "money": {
+    "Copper": 5,
+    "Silver": 8,
+    "Gold": 47,
+    "Platinum": 2
+  },
+  "feats": [
+    "Weapon Focus (Battleaxe)",
+    "Power Attack",
+    "Cleave",
+    "Weapon Specialization (Battleaxe)",
+    "Improved Sunder"
+  ],
+  "special_abilities": [
+    "Darkvision 60 ft",
+    "Stonecunning (+2 on checks related to stone)",
+    "Stability (+4 vs bull rush/trip when on ground)",
+    "+2 saves vs poison/spells",
+    "+1 attack vs orcs and goblinoids",
+    "+4 AC vs giants"
+  ],
+  "spells": [],
+  "spell_slots": {},
+  "spell_save_dc_base": 10,
+  "arcane_spell_failure": 25,
+  "spells_known": {},
+  "spells_per_day": {},
+  "bonus_spells": {},
+  "languages": [
+    "Common",
+    "Dwarven"
+  ],
+  "skills": {
+    "Climb": {
+      "class_skill": true,
+      "ranks": 8,
+      "misc": 0,
+      "key_ability": "Strength"
+    },
+    "Craft (Armorsmithing)": {
+      "class_skill": true,
+      "ranks": 5,
+      "misc": 2,
+      "key_ability": "Intelligence"
+    },
+    "Intimidate": {
+      "class_skill": true,
+      "ranks": 4,
+      "misc": 0,
+      "key_ability": "Charisma"
+    },
+    "Jump": {
+      "class_skill": true,
+      "ranks": 8,
+      "misc": 0,
+      "key_ability": "Strength"
+    },
+    "Ride": {
+      "class_skill": true,
+      "ranks": 3,
+      "misc": 0,
+      "key_ability": "Dexterity"
+    },
+    "Swim": {
+      "class_skill": true,
+      "ranks": 6,
+      "misc": 0,
+      "key_ability": "Strength"
+    }
+  },
+  "class_skill_max_rank": 8,
+  "cross_class_max_rank": 4
+}
