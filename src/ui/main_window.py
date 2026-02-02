@@ -33,22 +33,39 @@ class SimpleCharacterApp:
         self.str_entry = ttk.Entry(self.root, width=10)
         self.str_entry.grid(row=1, column=1, padx=5, pady=5)
 
-        # Modifier label (will update automaticially)
+        # STR Modifier label (will update automaticially)
         ttk.Label(self.root, text="Modifier:").grid(
             row=1, column=2, padx=5, pady=5, sticky='e'
         )
         self.str_mod_label = ttk.Label(self.root, text=0, relief='sunken')
         self.str_mod_label.grid(row=1, column=3, padx=5, pady=5)
 
-        # Bind event: When user types, update modifier
+        # Bind event: When user types, update STR modifier
         self.str_entry.bind('<KeyRelease>', self.update_str_modifier)
+
+        # Dexterity
+        ttk.Label(self.root, text="Dexterity:").grid(
+            row=2, column=0, padx=5, pady=5, sticky='e'
+        )
+        self.dex_entry = ttk.Entry(self.root, width=10)
+        self.dex_entry.grid(row=2, column=1, padx=5, pady=5)
+
+        # DEX Modifier label (will update automaticially)
+        ttk.Label(self.root, text="Modifier:").grid(
+            row=2, column=2, padx=5, pady=5, sticky='e'
+        )
+        self.dex_mod_label = ttk.Label(self.root, text=0, relief='sunken')
+        self.dex_mod_label.grid(row=2, column=3, padx=5, pady=5)
+
+        # Bind event: When user types, update STR modifier
+        self.dex_entry.bind('<KeyRelease>', self.update_dex_modifier)
 
         # Save button
         ttk.Button(
             self.root
             , text="Save Character"
             , command=self.save_character
-        ).grid(row=2, column=0, columnspan=4, pady=20)
+        ).grid(row=8, column=0, columnspan=4, pady=20)
 
     def update_str_modifier(self, event=None):
         """Step 3: Update modifier when strength changes"""
@@ -64,6 +81,21 @@ class SimpleCharacterApp:
         except ValueError:
             # User typed Non-Number, ignore
             pass
+
+    def update_dex_modifier(self, event=None):
+        """Step 3: Update modifier when dex changes"""
+        try:
+            # Get value from entry field
+            dex = int(self.dex_entry.get())
+            # Update Character
+            self.character.abilities['Dexterity'] = dex
+            # Calulate Modifier
+            modifier = self.character.get_ability_modifier('Dexterity')
+            # Update Label
+            self.dex_mod_label.config(text=str(modifier))
+        except ValueError:
+            # User typed Non-Number, ignore
+            pass
     
     def save_character(self):
         """Step 4: Save character data"""
@@ -72,6 +104,7 @@ class SimpleCharacterApp:
 
         print(f"Saved: {self.character.character_name}")
         print(f"Strength: {self.character.abilities['Strength']}")
+        print(f"Dexterity: {self.character.abilities['Dexterity']}")
 
 if __name__ == "__main__":
     root= tk.Tk()
