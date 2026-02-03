@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from tkinter import ttk
 from src.models.character_model import DnD35Character
@@ -96,6 +97,66 @@ class SimpleCharacterApp:
         except ValueError:
             # User typed Non-Number, ignore
             pass
+
+    def update_con_modifier(self, event=None):
+        """Step 3: Update modifier when con changes"""
+        try:
+            # Get value from entry field
+            dex = int(self.dex_entry.get())
+            # Update Character
+            self.character.abilities['Constitution'] = dex
+            # Calulate Modifier
+            modifier = self.character.get_ability_modifier('Constitution')
+            # Update Label
+            self.dex_mod_label.config(text=str(modifier))
+        except ValueError:
+            # User typed Non-Number, ignore
+            pass
+    
+    def update_int_modifier(self, event=None):
+        """Step 3: Update modifier when int changes"""
+        try:
+            # Get value from entry field
+            dex = int(self.dex_entry.get())
+            # Update Character
+            self.character.abilities['Intelligence'] = dex
+            # Calulate Modifier
+            modifier = self.character.get_ability_modifier('Intelligence')
+            # Update Label
+            self.dex_mod_label.config(text=str(modifier))
+        except ValueError:
+            # User typed Non-Number, ignore
+            pass
+
+    def update_wis_modifier(self, event=None):
+        """Step 3: Update modifier when wis changes"""
+        try:
+            # Get value from entry field
+            dex = int(self.dex_entry.get())
+            # Update Character
+            self.character.abilities['Wisdom'] = dex
+            # Calulate Modifier
+            modifier = self.character.get_ability_modifier('Wisdom')
+            # Update Label
+            self.dex_mod_label.config(text=str(modifier))
+        except ValueError:
+            # User typed Non-Number, ignore
+            pass
+
+    def update_chr_modifier(self, event=None):
+        """Step 3: Update modifier when chr changes"""
+        try:
+            # Get value from entry field
+            dex = int(self.dex_entry.get())
+            # Update Character
+            self.character.abilities['Charisma'] = dex
+            # Calulate Modifier
+            modifier = self.character.get_ability_modifier('Charisma')
+            # Update Label
+            self.dex_mod_label.config(text=str(modifier))
+        except ValueError:
+            # User typed Non-Number, ignore
+            pass
     
     def save_character(self):
         """Step 4: Save character data"""
@@ -105,6 +166,10 @@ class SimpleCharacterApp:
         print(f"Saved: {self.character.character_name}")
         print(f"Strength: {self.character.abilities['Strength']}")
         print(f"Dexterity: {self.character.abilities['Dexterity']}")
+        print(f"Constitution: {self.character.abilities['Constitution']}")
+        print(f"Intelligence: {self.character.abilities['Intelligence']}")
+        print(f"Wisdom: {self.character.abilities['Wisdom']}")
+        print(f"Charisma: {self.character.abilities['Charisma']}")
 
 if __name__ == "__main__":
     root= tk.Tk()

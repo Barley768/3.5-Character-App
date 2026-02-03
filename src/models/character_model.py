@@ -6,7 +6,9 @@ class DnD35Character:
         self.character_name = ''
         self.player_name = ''
         self.race = ''
+        self.size = "Medium"
         self.character_class = ''
+        self.level = 1
 
         # Ability Scores
         self.abilities = {
@@ -19,10 +21,12 @@ class DnD35Character:
         }
 
         # Combat stats
+        self.max_hp = 1
+        self.current_hp = 1
         self.ac_armor_bonus = 0
         self.ac_shield_bonus = 0
         self.ac_natural_armor = 0
-        self.size = "Medium"
+        self.base_attack_bonus = 1
     
     def get_ability_modifier(self, ability_name):
         """Step 2: Add calculation methods"""
@@ -61,6 +65,14 @@ class DnD35Character:
                  self.ac_natural_armor)
         
         return total
+    
+    def get_initiative_mod(self):
+        init_mod = self.get_ability_modifier('Dexterity')
+        return init_mod
+    
+    def melee_attack_bonus(self):
+        MAB = self.base_attack_bonus + self.get_ability_modifier('Strength') +self.get_size_modifier()
+
     
 if __name__ == "__main__":
     # Create a character
